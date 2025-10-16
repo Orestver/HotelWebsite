@@ -1,0 +1,287 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.hero {
+    position: relative;
+    background-image: url('../images/WeddingHero.jpg');
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+/* текст */
+.hero-text {
+    position: relative;
+    z-index: 2; /* щоб було поверх затемнення */
+    color: white;
+    text-align: center;
+}
+
+.host-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 6px;
+    padding: 10px 20px;
+    background-color: darkkhaki;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    margin-top: 15px;
+    z-index: 2;
+    border: none;
+    transition: all 0.3s ease;
+}
+.host-button:hover {
+    background-color: #b5a642;
+    color: black;
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+    transform: translateY(-3px);
+}
+.header{
+    background-color: #F8F1E7;
+    color: #6B705C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 50px;
+}
+
+
+/* Загальний стиль секції */
+.events {
+  padding: 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Сітка карток */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Картки івентів */
+.event-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  height: 400px;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+/* Зображення */
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(75%);
+  transition: filter 0.4s;
+}
+
+.event-card:hover img {
+  filter: brightness(50%);
+}
+
+/* Текстовий оверлей */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  text-align: left;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.overlay h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover .overlay p {
+  opacity: 1;
+}
+.event-btn {
+  all: unset;
+  display: block;
+  cursor: pointer;
+}
+
+.event-btn img {
+  width: 100%;
+  display: block;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #f8f8f8;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 40px 0;
+}
+
+.contact-info, .contact-form {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.contact-info h3, .contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 8px 0;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #dfd299;
+
+}
+
+.contact-form textarea {
+  resize: none; 
+}
+
+.contact-form .btn {
+  background-color: hsl(56, 38%, 58%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form .btn:hover {
+  background-color: hsla(56, 38%, 58%, 0.848);
+}
+
+
+/* --- Адаптація для планшетів --- */
+@media (max-width:1024px) {
+  .event-card {
+    height: 320px;
+  }
+
+  .overlay h3 {
+    font-size: 20px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .contact-info, .contact-form {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* --- Адаптація для телефонів --- */
+@media (max-width: 560px) {
+
+  .dividertext {
+    font-size: 14px !important;
+    top: -10px;
+  }
+  .events {
+    padding: 10px;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .event-card {
+    height: 250px; 
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .overlay h3 {
+    font-size: 18px;
+  }
+
+  .overlay p {
+    font-size: 13px;
+  }
+
+  .hero {
+    height: 250px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .host-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  .contact-info, .contact-form {
+  flex: 1 1 45%;
+  min-width: auto;
+}
+}

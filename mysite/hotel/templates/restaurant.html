@@ -1,0 +1,117 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block title %}
+Restaurant
+{% endblock %}
+
+{% block content%}
+
+<section class="hero-restaurant">
+    <div class="hero-text">
+        <h1>Our Restaurant</h1>
+        <p>Experience exquisite dining with a view.</p>
+    </div>
+</section>
+
+
+
+
+<section id="menu" class="menu-section">
+    <div class="divider-container">
+        <hr class="divider">
+        <h2 class="dividertext">Our Menu</h2>
+    </div>
+  <div class="menu-grid">
+    <!-- grilledSalmon -->
+    <div class="menu-card">
+      <img src="{% static 'images/grilledSalmon.jpg' %}" alt="grilledSalmon">
+      <div class="menu-card-info">
+        <h4>Grilled Salmon</h4>
+        <p>Fresh salmon with lemon butter sauce</p>
+        <span>$18</span>
+      </div>
+    </div>
+
+    <!-- caesarSalad 2 -->
+    <div class="menu-card">
+      <img src="{% static 'images/caesarSalad.jpg' %}" alt="caesarSalad">
+      <div class="menu-card-info">
+        <h4>Caesar Salad</h4>
+        <p>Crisp lettuce with parmesan and croutons</p>
+        <span>$10</span>
+      </div>
+    </div>
+
+    <!-- chocolateCake -->
+    <div class="menu-card">
+      <img src="{% static 'images/chocolateCake.jpg' %}" alt="chocolateCake">
+      <div class="menu-card-info">
+        <h4>Chocolate Cake</h4>
+        <p>Rich chocolate cake with berries</p>
+        <span>$8</span>
+      </div>
+    </div>
+
+
+    <div class="menu-card">
+      <img src="{% static 'images/MargheritaPizza.jpg' %}" alt="MargheritaPizza">
+      <div class="menu-card-info">
+        <h4>Margherita Pizza</h4>
+        <p>Classic tomato sauce, fresh mozzarella, and basil</p>
+        <span>$14</span>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="{% static 'images/CarbonaraPasta.jpg' %}" alt="CarbonaraPasta">
+      <div class="menu-card-info">
+        <h4>Pasta Carbonara</h4>
+        <p>Pasta with pancetta, egg, and parmesan sauce</p>
+        <span>$16</span>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="{% static 'images/BeefSteak.jpg' %}" alt="BeefSteak">
+      <div class="menu-card-info">
+        <h4>Beef Steak</h4>
+        <p>Juicy grilled steak with roasted vegetables</p>
+        <span>$25</span>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="{% static 'images/ChickenAlfredo.jpg' %}" alt="ChickenAlfredo">
+      <div class="menu-card-info">
+        <h4>Chicken Alfredo</h4>
+        <p>Grilled chicken breast with creamy Alfredo pasta</p>
+        <span>$17</span>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="{% static 'images/TomatoSoup.jpg' %}" alt="TomatoSoup">
+      <div class="menu-card-info">
+        <h4>Tomato Soup</h4>
+        <p>Fresh tomato soup served with basil and cream</p>
+        <span>$8</span>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="{% static 'images/BBQRibs.jpg' %}" alt="BBQRibs">
+      <div class="menu-card-info">
+        <h4>BBQ Ribs</h4>
+        <p>Tender pork ribs with barbecue glaze</p>
+        <span>$22</span>
+      </div>
+    </div>
+
+    <!-- Додаткові картки можна дублювати -->
+  </div>
+</section>
+
+
+
+
+{% endblock%}

@@ -1,0 +1,239 @@
+.hero-spafitness {
+    position: relative;
+    background-image: url('../images/SpaFitnessHero.jpg');
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-spafitness::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+
+.hero-text {
+    position: relative;
+    z-index: 2; 
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+.section {
+  display: flex;
+  min-height: 600px;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 30px;
+  background-color: #F8F1E7;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+  height: 600px;
+}
+
+.sidebar h1 {
+  font-size: 40px;
+  color: #6B705C;
+  text-align: center;
+}
+
+.sidebar h2 {
+  z-index: 2;
+  font-size: 24px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  text-align: center;
+  background-color: darkkhaki;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.sidebar h2:hover,
+.sidebar h2.active {
+  color: black;
+  transform: translateY(-5px);
+  box-shadow: rgb(206, 200, 27) 0px 4px 15px;
+}
+
+.additional-info {
+  flex: 2;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  background: white;
+}
+
+.spafitness-info-img,
+.spafitness-info-text {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.spafitness-info-img {
+  width: 50%;
+  height: auto;
+  border-radius: 20px; 
+  object-fit: cover;
+  transition: transform 0.5s ease; 
+  display: block;
+}
+
+
+.spafitness-info-img img:hover {
+  transform: scale(1.2);
+}
+
+/* Активний стан — плавна поява і повернення на місце */
+.additional-info.active .spafitness-info-img,
+.additional-info.active .spafitness-info-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*затримка для тексту, щоб фото з’являлося першим */
+.additional-info.active .spafitness-info-text {
+  transition-delay: 0.2s;
+}
+
+.spafitness-info-text {
+  color: #6B705C;
+  text-align: center;
+}
+
+.spafitness-info-text p {
+  color: darkkhaki;
+  font-size: 16px;
+}
+
+
+.btn-try {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: darkkhaki;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: all 0.5s ease;
+  border: none;
+}
+
+.btn-try:hover {
+  background-color: #b5a642;
+  color: black;
+}
+
+
+/* ================================================Адаптація====================================================== */
+/* Планшет */
+@media (max-width: 1024px) {
+  .section {
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .sidebar {
+    margin-left: 30px;
+    padding: 20px;
+    height: auto;
+  }
+
+  .sidebar h1 {
+    font-size: 36px;
+  }
+
+  .sidebar h2 {
+    font-size: 22px;
+  }
+
+  .additional-info {
+    padding: 20px;
+  }
+
+  .spafitness-info-img {
+    width: 60%;
+  }
+
+  .spafitness-info-text p {
+    font-size: 15px;
+  }
+
+  .btn-try {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+}
+
+/* Телефон */
+@media (max-width: 560px) {
+  .section {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar h1 {
+    font-size: 28px;
+  }
+
+  .sidebar h2 {
+    font-size: 20px;
+  }
+
+  .additional-info {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .spafitness-info-img {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .spafitness-info-text {
+    text-align: center;
+  }
+
+  .spafitness-info-text p {
+    font-size: 14px;
+  }
+
+  .btn-try {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+}

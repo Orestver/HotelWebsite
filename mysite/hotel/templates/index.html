@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}
+Cozy Corner Hotel
+{% endblock %}
+
+{% block content %}
+<!-- Тут весь контент сторінки -->
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+
+    <!-- Слайд 1 -->
+    <div class="swiper-slide">
+      <img src="{% static 'images/homePhoto1.jpg' %}" alt="Hotel 1">
+      <div class="slide-text">
+        <h2>Welcome to Cozy Corner Hotel</h2>
+        <p>Relax, unwind, and enjoy a luxurious stay</p>
+      </div>
+    </div>
+
+    <!-- Слайд 2 -->
+    <div class="swiper-slide">
+      <img src="{% static 'images/homePhoto2.jpg' %}" alt="Hotel 2">
+      <div class="slide-text">
+        <h2>Luxury Rooms & Spa</h2>
+        <p>Experience comfort and elegance</p>
+      </div>
+    </div>
+
+    <!-- Слайд 3 -->
+    <div class="swiper-slide">
+      <img src="{% static 'images/homePhoto3.jpg' %}" alt="Hotel 3">
+      <div class="slide-text">
+        <h2>Book Your Stay Now</h2>
+        <p>Enjoy our exclusive offers</p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Кнопки -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+  <!-- Точки -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<div class="divider-container">
+    <hr class="divider">
+    <h2 class="dividertext">Weather</h2>
+</div>
+
+<div id="weather" class="weather-box">
+  Завантаження погоди...
+</div>
+
+<div class="divider-container">
+    <hr class="divider">
+    <h2 class="dividertext">Rooms</h2>
+</div>
+
+<div class="info-container">
+    <div class="info-text">
+        <h1 style="color: #6B705C; font-style: italic;">New Room <br>Interiors</h1>
+        <p style="color: darkkhaki;">Discover our newly redesigned rooms,<br> created with your comfort in mind.<br> Modern design, warm colors,<br> and thoughtful details make every stay truly unforgettable.</p>
+        <a href="/rooms/" class="more-button">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                fill="none" stroke="currentColor" stroke-width="2" 
+                stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+
+
+    </div>
+
+    <div class="info-image">
+        <img src="{% static 'images/inforoom.jpg' %}" alt="Room photo">
+    </div>
+</div>
+
+
+<div class="divider-container">
+    <hr class="divider">
+    <h2 class="dividertext">Restaurant & Bar</h2>
+</div>
+
+
+<div class="info-container">
+    <div class="info-image">
+        <img src="{% static 'images/restaurantphoto1.jpg' %}" alt="Restaurant photo">
+    </div>
+
+    <div class="info-text">
+        <h1 style="color: #6B705C; font-style: italic;">Dine in Style</h1>
+        <p style="color: darkkhaki;">Savor exquisite flavors,<br> unwind with expertly crafted cocktails,<br> and experience the perfect blend of elegance and comfort <br> at our Restaurant & Bar.</p>
+        <a href="/restaurant/" class="more-button">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                fill="none" stroke="currentColor" stroke-width="2" 
+                stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+
+    </div>
+</div>
+
+<div class="divider-container">
+    <hr class="divider">
+    <h2 class="dividertext">Metings & Events</h2>
+</div>
+
+
+
+
+<div class="info-container">
+    <div class="info-text">
+        <h1 style="color: #6B705C; font-style: italic;">Host <br>Your Perfect Event</h1>
+        <p style="color: darkkhaki;">
+            Stylish and fully equipped spaces for business meetings,<br> conferences, and private celebrations,<br> tailored to create a perfect event experience.
+        </p>
+        <a href="/events/" class="more-button">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                fill="none" stroke="currentColor" stroke-width="2" 
+                stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+          
+        
+    </div>
+
+    <div class="info-image">
+        <img src="{% static 'images/eventPhoto.jpg' %}" alt="Event photo">
+    </div>
+</div>
+
+
+
+<div class="divider-container">
+    <hr class="divider">
+    <h2 class="dividertext">Spa & Fitness</h2>
+</div>
+
+
+<div class="info-container">
+    <div class="info-image">
+        <img src="{% static 'images/massagePhoto.jpg' %}" alt="Massage photo">
+    </div>
+
+    <div class="info-text">
+        <h1 style="color: #6B705C; font-style: italic;">Relax & Recharge</h1>
+        <p style="color: darkkhaki;">
+            Relax and rejuvenate at our Spa & Fitness center <br> with soothing treatments, massages, and modern wellness facilities <br> designed to refresh your body and mind.
+        </p>
+        <a href="/spafitnes/" class="more-button">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                fill="none" stroke="currentColor" stroke-width="2" 
+                stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block script%}
+<!-- бібліотека Swiper -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+   <!-- Slider файл -->
+   <script src="{% static 'js/slider.js' %}"></script>
+
+   <script src="{% static 'js/weather.js' %}"></script>
+{%endblock%}

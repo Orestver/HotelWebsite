@@ -1,0 +1,255 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.hero-rooms {
+    position: relative;
+    background-image: url('../images/RoomHero.jpg');
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-rooms::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2; /* щоб було поверх затемнення */
+    color: white;
+    text-align: center;
+}
+
+.room-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 25px;
+    margin-left: 150px;
+    gap: 20px;
+}
+.room-slider {
+    width: 525px;
+    height: 400px;
+}
+
+.room-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* щоб картинка гарно обрізалась */
+  display: block;
+}
+
+/* Пагінація (кружечки) */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #b29033 !important; /* активна — інший колір */
+}
+
+.swiper.room-slider .swiper-slide img {
+  filter: none;          
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper.room-slider .swiper-slide::after {
+  content: none;        
+}
+.room-info{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.room-info h2{
+  font-size: 32px;
+  font-style: italic;
+  color: #6B705C;
+} 
+.room-info p{
+  font-size: 16px;
+  color: #6B705C;
+} 
+.room-info h3{
+  font-size: 24px;
+  color: darkkhaki;
+} 
+.room-info a{
+  text-decoration: none;
+  background-color: darkkhaki;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.room-info a:hover{
+  background-color: #b5a642;
+}
+
+.details{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 20px;
+  color: #6B705C;
+}
+
+.book-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;                          /* спочатку без відступу */
+  padding: 10px 20px;
+  background: #6B705C;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Галочка прихована */
+.icon-check {
+  max-width: 0;                    /* початково згорнута */
+  opacity: 0;                      /* невидима */
+  margin-left: 0;
+  transition: max-width 0.5s ease, opacity 0.5s ease, margin-left 0.5s ease;
+}
+
+.icon-check path {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  transition: stroke-dashoffset 0.8s ease;
+}
+
+.book-link:hover {
+  background-color: #a5a58d;
+}
+
+.book-link:hover .icon-check {
+  max-width: 28px;                 /* плавно розширюється */
+  opacity: 1;                      /* плавно з'являється */
+  margin-left: 8px;                /* відстань між текстом і галочкою */
+}
+
+.book-link:hover .icon-check path {
+  stroke-dashoffset: 0;            /* промальовується галочка */
+}
+
+
+.room-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+/* --- Планшети --- */
+@media (min-width: 561px) and (max-width: 1024px) {
+    .room-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+        gap: 10px;
+    }
+    
+    .room-slider {
+        width: 100%;
+    }
+
+    .room-info {
+        max-width: 100%;
+        font-size: 18px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* --- Телефони --- */
+@media (max-width: 560px) {
+    .room-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .room-slider {
+        width: 100%;
+    }
+
+    .room-info {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        margin: 0px;
+    }
+
+    .room-info h2 {
+        font-size: 20px;
+    }
+
+    .room-info p,
+    .room-info .details p {
+        font-size: 14px;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 90%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .swiper-pagination {
+        bottom: 5px;
+    }
+
+
+}
+
+/* Зменшення відстаней між кімнатами на маленьких екранах */
+@media (max-width: 560px) {
+    .divider {
+        margin: 20px 0;
+    }
+}

@@ -1,0 +1,148 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block title %}
+Spa & Fitness
+{% endblock %}
+
+{% block content%}
+
+
+
+<div id="bookingPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeBookingPopup()">&times;</span>
+            <h2>Book a Fitness & Spa Session</h2>
+            <form id="bookingForm">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="datetime-local" placeholder="Check-in" required>
+            <input type="datetime-local" placeholder="Check-out" required>
+            <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+</div>
+
+
+
+<section class="hero-spafitness">
+  <div class="hero-text">
+      <h1>Спа & Фітнес</h1>
+    <p>
+        Втечіть від повсякденності та насолодіться чистим спокоєм. <br>
+        Відчуйте наші розкішні спа-процедури та найсучасніший фітнес-центр, <br> 
+        створений для того, щоб збалансувати ваше тіло та розум.
+    </p>
+  </div>
+</section>
+
+<div class="divider-container">
+        <hr class="divider">
+        <h2 class="dividertext">Спа зона</h2>
+</div>
+
+
+<div class="section">
+  <div class="sidebar spa-menu">
+    <h1>Spa Procedures</h1>
+    <hr class="divider" style="width: auto; margin-bottom: 20px;">
+    
+    <h2 class="menu-item active" data-service="massage">
+        <i class="fa-solid fa-hand-spock"></i> Massage
+    </h2>
+    
+    <h2 class="menu-item" data-service="sauna">
+        <i class="fa-solid fa-hot-tub-person"></i> Sauna
+    </h2>
+    
+    <h2 class="menu-item" data-service="facecare">
+        <i class="fa-solid fa-face-smile"></i> Face Care
+    </h2>
+    
+    <h2 class="menu-item" data-service="jacuzzi">
+        <i class="fa-solid fa-bath"></i> Jacuzzi
+    </h2>
+    </div>
+
+
+  <div class="additional-info active" id="spa-info">
+    <img src="{% static 'images/massagePhoto.jpg' %}" alt="Massage" class="spafitness-info-img">
+    <div class="spafitness-info-text">
+      <h2>Ароматерапевтичний масаж</h2>
+      <p>Зануртеся у світ спокою з нашими натуральними ефірними оліями.</p>
+      <p>Час роботи <br>9:00 - 21:00</p>
+      <button class="btn-try" type="button" onclick="openBookingPopup()">Спробувати зараз</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="divider-container">
+        <hr class="divider">
+        <h2 class="dividertext">Фітнес-центр</h2>
+</div>
+
+
+
+<div class="section">
+  <div class="sidebar fitness-menu">
+    <h1>Gym & Fitness</h1>
+    <hr class="divider" style="width: auto; margin-bottom: 20px;">
+
+    <h2 class="menu-item active" data-service="gym">
+        <i class="fa-solid fa-dumbbell"></i> Training Zone
+    </h2>
+    
+    <h2 class="menu-item" data-service="cardio">
+        <i class="fa-solid fa-person-running"></i> Cardio Zone
+    </h2>
+    
+    <h2 class="menu-item" data-service="classes">
+        <i class="fa-solid fa-people-group"></i> Group Classes
+    </h2>
+    
+    <h2 class="menu-item" data-service="trainer">
+        <i class="fa-solid fa-user-ninja"></i> Personal Trainer
+    </h2>
+  </div>
+
+
+  <!-- Основний блок інформації -->
+  <div class="additional-info active" id="gym-info">
+    <img src="{% static 'images/Gym.jpg' %}" alt="Gym Zone" class="spafitness-info-img">
+    <div class="spafitness-info-text">
+      <h2>Сучасний фітнес-зал</h2>
+      <p>Наш зал оснащений найновішим обладнанням для кардіо, силових і функціональних тренувань. 
+      Відчуйте мотивацію й енергію у просторі, створеному для вашого комфорту.</p>
+      <p>Графік роботи <br>6:00 – 23:00</p>
+      <button class="btn-try" type="button" onclick="openBookingPopup()">Записатися на тренування</button>
+    </div>
+  </div>
+</div>
+
+{% endblock%}
+
+
+{%block script%}
+   <script>
+        const staticUrls = {
+            massage: "{% static 'images/massagePhoto.jpg' %}",
+            sauna: "{% static 'images/Sauna.jpg' %}",
+            facecare: "{% static 'images/FaceCare.jpg' %}",
+            jacuzzi: "{% static 'images/Jacuzzi.jpg' %}"
+            };
+
+
+
+      const fitnessStaticUrls = {
+            gym: "{% static 'images/Gym.jpg' %}",
+            cardio: "{% static 'images/Cardio.jpg' %}",
+            classes: "{% static 'images/GroupFitness.jpg' %}",
+            trainer: "{% static 'images/PersonalTrainer.jpg' %}"
+          };
+    </script>
+
+
+
+   <script src="{% static 'js/spahover.js' %}"></script>
+{%endblock%}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contacts | Cozy Corner Hotel
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero секція -->
+<header class="contact-hero">
+  <div class="hero-text">
+    <h1>Contact Us</h1>
+    <p>We’re here to help — get in touch or find us easily on the map below</p>
+  </div>
+</header>
+
+<div class="divider-container">
+    <hr class="divider">
+    <h2 class="dividertext">Main Desiner</h2>
+</div>
+<section class="dev-info-container">
+    <div class="photo-container">
+      <img src="{% static 'images/DeveloperPhoto.jpg'%}" alt="DesinerPhoto" class="designer-photo">
+    </div>
+    <div class="description">
+      <h2>Верхола Орест</h2>
+      <p> Зараз я навчаюся у львівській політехніці <br>на 2 курсі на факультеті ПП. 
+        <br>Розробляв цей сайт досить довго приблизно 1 місяць  <br> але на мою думку вийшло дуже гарно.
+      <br> В подальшому планую далі розвивати цей сайт <br>додати більше функцій які будуть працювати разом з бекендом.</p>
+        
+    </div>
+
+</section>
+<div class="divider-container">
+    <hr class="divider">
+    <h2 class="dividertext">Contact Us</h2>
+</div>
+<!-- Контент -->
+<section class="contact-page">
+  <div class="contact-info-section">
+    <h2>Get in Touch</h2>
+    <p>Have questions or want to book your stay? Reach out — we’ll respond as soon as possible!</p>
+
+    <ul class="contact-list">
+      <li><i class="fa-solid fa-phone"></i> +380 67 568 48 53</li>
+      <li><i class="fa-solid fa-envelope"></i> info@cozycornerhotel.com</li>
+      <li><i class="fa-solid fa-location-dot"></i> Stepana Bandery St, 83, Lviv, Ukraine</li>
+    </ul>
+
+    <div class="social-links">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-telegram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+  <div class="contact-video">
+      <h2>Discover Cozy Corner Hotel</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/MQq1W-VXrDI?si=n-3qYpuJskrysJHD" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+       </iframe>
+      </div>
+  </div>
+  <div class="map-section">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.210715517552!2d24.01571817668826!3d49.8396839714797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add721b1e5c8f%3A0x76d7a57f4d331e9a!2sStepana%20Bandery%20St%2C%2083%2C%20Lviv!5e0!3m2!1sen!2sua!4v1714567890123" 
+      width="500%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block special_offers%}
+{% endblock %}

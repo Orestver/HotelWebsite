@@ -1,0 +1,126 @@
+{% extends 'base.html'%}
+{% block title %}
+{%load static%}
+Events
+{% endblock %}
+
+{% block content%}
+
+<div id="bookingPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeBookingPopup()">&times;</span>
+            <h2>Host your event</h2>
+            <form id="bookingForm">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="datetime-local" placeholder="Check-in" required>
+            <input type="datetime-local" placeholder="Check-out" required>
+            <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+</div>
+
+<div id="successMsg" class="success-msg">
+        <p>Event will be host successfully!</p>
+</div>
+
+
+<section class="hero">
+  <div class="hero-text">
+      <h1>Events</h1>
+    <p>
+        We will help make your event unforgettable - from a wedding to a business conference.
+    </p>
+  </div>
+  <button type="button" class="host-button" onclick="openBookingPopup()">Host Your Event</button>
+
+</section>
+
+
+<div class="divider-container">
+    <hr class="divider">
+    <h2 class="dividertext">What We Host</h2>
+</div>
+
+
+<section class="events">
+  <div class="events-grid">
+    <div class="event-card">
+      <a href="#"  onclick="openBookingPopup(); return false;">
+        <img src="{%static 'images/wedding.jpg'%}" alt="Wedding Celebration">
+        <div class="overlay">
+            <h3>Dream Weddings</h3>
+            <p>Celebrate your love in an elegant venue with personalized decoration and catering.</p>
+        </div>
+      </a>
+    </div>
+    <div class="event-card">
+      <a href="#"  onclick="openBookingPopup(); return false;">
+      <img src="{%static 'images/Birthday.jpg'%}"  alt="BirthdayParty">
+      <div class="overlay">
+        <h3>Birthday Parties</h3>
+        <p>Enjoy fun, laughter, and memories with friends and family in our private halls.</p>
+      </div>
+      </a>
+    </div>
+
+    <div class="event-card">
+        <a href="#"  onclick="openBookingPopup(); return false;">
+            <img src="{%static 'images/conference.jpg'%}"  alt="CorporateEvent">
+            <div class="overlay">
+                <h3>Corporate Events</h3>
+                <p>Host professional meetings, seminars, or company retreats with full support.</p>
+            </div>
+          </a>
+    </div>
+
+    <div class="event-card">
+        <a href="#"  onclick="openBookingPopup(); return false;">
+                <img src="{%static 'images/romanticDinner.jpg'%}"  alt="RomanticDinner">
+                <div class="overlay">
+                    <h3>Romantic Dinners</h3>
+                    <p>Set the mood with candlelight and gourmet dishes in a cozy, private atmosphere.</p>
+                </div>
+        </a>
+    </div>
+  </div>
+</section>
+
+
+<div class="divider-container">
+    <hr class="divider">
+    <h2 class="dividertext">Contact Us</h2>
+</div>
+
+<section class="contact-section">
+  <div class="contact-info">
+  <h3>Get in Touch</h3>
+  <p>Have questions about hosting your event? We’re here to help!</p>
+  <ul>
+    <li><i class="fa-solid fa-phone"></i> +380 81 523 45 67</li>
+    <li><i class="fa-solid fa-envelope"></i> events@cozycornerhotel.com</li>
+    <li><i class="fa-solid fa-location-dot"></i> Stepana Bandery St, 83, Ukraine</li>
+  </ul>
+</div>
+
+  <div class="contact-form">
+      <h3>Send a Message</h3>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+  </div>
+
+  <div id="contactSuccessMsg" class="success-msg">
+      <p>Message sent successfully!</p>
+  </div>
+
+</section>
+
+{% endblock%}
+
+{% block script%}
+<script src="{% static 'js/booking.js' %}"></script>
+{%endblock%}

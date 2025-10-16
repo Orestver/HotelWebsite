@@ -1,0 +1,191 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block title %}
+Rooms
+{% endblock %}
+
+{% block content%}
+
+<section class="hero-rooms">
+  <div class="hero-text">
+      <h1>Rooms</h1>
+    <p>
+        Book 24/7 whenever you want.
+    </p>
+  </div>
+</section>
+
+
+<div class="room-container">
+    <div class="swiper room-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="{% static 'images/DeluxeBed.jpg' %}" alt="Deluxe bedroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/DeluxeLiv.jpg' %}" alt="Deluxe livingroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/DeluxeBath.jpg' %}" alt="Deluxe bathroom"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="room-info">
+      <h2>Deluxe Room</h2>
+      <hr class="divider" style="width: 250px;">
+      <p>Experience luxury in our Deluxe Room, <br> featuring elegant decor, <br> a plush king-size bed, <br> and modern amenities for a comfortable stay.</p>
+      <div class="details">
+        <p><strong>Size:</strong> <br> 35 sqm</p>
+        <p><strong>Occupancy:</strong>  <br> 2 Adults</p>
+        <p><strong>Bed Type:</strong> <br>King-size bed</p>
+      </div>
+      <h3>Price: $150 per night</h3>
+      <a href="#" class="book-link" onclick="openBookingPopup(); return false;">
+        Book Now
+        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+
+    </div>
+</div>
+<hr class="divider">
+<div class="room-container">
+    <div class="swiper room-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="{% static 'images/StandardBed.jpg' %}" alt="Standard bedroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/StandardLiv.jpg' %}" alt="Standard livingroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/StandardBath.jpg' %}" alt="Standard bathroom"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="room-info">
+      <h2>Standard Room</h2>
+      <hr class="divider" style="width: 250px;">
+      <p>A cozy room with modern décor and essential amenities, <br>perfect for a comfortable stay.</p>
+      <div class="details">
+        <p><strong>Size:</strong> <br> 25 sqm</p>
+        <p><strong>Occupancy:</strong>  <br> 2 Adults</p>
+        <p><strong>Bed Type:</strong> <br>Queen-size bed</p>
+      </div>
+      <h3>Price: $100 per night</h3>
+      <a href="#" class="book-link" onclick="openBookingPopup(); return false;">
+        Book Now
+        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+
+    </div>
+</div>
+<hr class="divider">
+
+<div class="room-container">
+    <div class="swiper room-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="{% static 'images/SuperiorBed.jpg' %}" alt="Superior bedroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/SuperiorLiv.jpg' %}" alt="Superior livingroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/SuperiorBath.jpg' %}" alt="Superior bathroom"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="room-info">
+      <h2>Superior Room</h2>
+      <hr class="divider" style="width: 250px;">
+      <p>A spacious room with panoramic windows, <br>stylish interiors, and all the necessities for a relaxing stay.</p>
+      <div class="details">
+        <p><strong>Size:</strong> <br> 30 sqm</p>
+        <p><strong>Occupancy:</strong>  <br> 2 Adults</p>
+        <p><strong>Bed Type:</strong> <br>King-size bed</p>
+      </div>
+      <h3>Price: $120 per night</h3>
+      <a href="#" class="book-link" onclick="openBookingPopup(); return false;">
+        Book Now
+        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+
+    </div>
+</div>
+<hr class="divider">
+
+<div class="room-container">
+    <div class="swiper room-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="{% static 'images/FamilyBed.jpg' %}" alt="Family bedroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/FamilyLiv.jpg' %}" alt="Family livingroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/FamilyBath.jpg' %}" alt="Family bathroom"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="room-info">
+      <h2>Family Room</h2>
+      <hr class="divider" style="width: 250px;">
+      <p>Ideal for families: <br>large space with either two separate beds or one large bed, <br>modern amenities, and a cozy atmosphere.</p>
+      <div class="details">
+        <p><strong>Size:</strong> <br> 40 sqm</p>
+        <p><strong>Occupancy:</strong>  <br> 4 Adults</p>
+        <p><strong>Bed Type:</strong> <br>2 Double beds</p>
+      </div>
+      <h3>Price: $180 per night</h3>
+      <a href="#" class="book-link" onclick="openBookingPopup(); return false;">
+        Book Now
+        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+
+    </div>
+</div>
+
+<hr class="divider">
+<div class="room-container">
+    <div class="swiper room-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="{% static 'images/SuiteBed.jpg' %}" alt="Suite bedroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/SuiteLiv.jpg' %}" alt="Suite livingroom"></div>
+          <div class="swiper-slide"><img src="{% static 'images/SuiteBath.jpg' %}" alt="Suite bathroom"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="room-info">
+      <h2>Suite</h2>
+      <hr class="divider" style="width: 250px;">
+      <p>A luxurious room with separate living and sleeping areas, <br>a large balcony, and premium amenities for ultimate comfort.</p>
+      <div class="details">
+        <p><strong>Size:</strong> <br> 55 sqm</p>
+        <p><strong>Occupancy:</strong>  <br> 2 Adults</p>
+        <p><strong>Bed Type:</strong> <br>King-size bed</p>
+      </div>
+      <h3>Price: $250 per night</h3>
+      <a href="#" class="book-link" onclick="openBookingPopup(); return false;">
+        Book Now
+        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+
+    </div>
+</div>
+{% endblock%}
+
+{%block script%}
+    <!-- бібліотека Swiper -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+   <!-- Slider файл -->
+   <script src="{% static 'js/room-slider.js' %}"></script>
+   <!-- Booking файл -->
+   <script src="{% static 'js/booking.js' %}"></script>
+{%endblock%}
+

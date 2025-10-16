@@ -1,0 +1,178 @@
+/* ====== Контактна сторінка ====== */
+
+.contact-hero {
+    position: relative;
+    background-image: url('../images/ContactHero.jpg');
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contact-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+/* текст */
+.hero-text {
+    position: relative;
+    z-index: 2; 
+    color: white;
+    text-align: center;
+}
+
+
+.dev-info-container {
+    display: flex;
+    flex-direction: row;
+    color: #6B705C;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.photo-container {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.designer-photo {
+    width: 300px;
+    height: 380px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.contact-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.contact-page h2 {
+  color: #6B705C;
+  margin-bottom: 10px;
+}
+.contact-info-section {
+  max-width: 450px;
+}
+
+.contact-info-section h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #6B705C;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contact-list li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-list i {
+  color: #6B705C;
+  font-size: 1.3em;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #6B705C;
+  font-size: 1.5em;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: darkkhaki;
+}
+
+.map-section {
+  flex: 1 1 400px;
+  min-width: 300px;
+  height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden; 
+}
+
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.contact-video {
+  text-align: center;
+  margin: 30px 0;
+  color: #6B705C;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Адаптація під мобільні */
+@media (max-width: 560px) {
+  .contact-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-section {
+    width: 100%;
+    height: 300px;
+  }
+
+  .map-section iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .dev-info-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
